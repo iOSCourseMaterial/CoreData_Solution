@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="TLTask" representedClassName="TLTask" syncable="YES">
+        <attribute name="created" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="list" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TLTaskList" inverseName="tasks" inverseEntity="TLTaskList" syncable="YES"/>
+    </entity>
+    <entity name="TLTaskList" representedClassName="TLTaskList" syncable="YES">
+        <attribute name="created" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TLTask" inverseName="list" inverseEntity="TLTask" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="TLTaskList" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="TLTask" positionX="115" positionY="-54" width="128" height="90"/>
+    </elements>
+</model>
